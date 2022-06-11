@@ -1,0 +1,12 @@
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\bin\Debug\net6.0\Library.DomainClasses.deps.json
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\bin\Debug\net6.0\Library.DomainClasses.dll
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\bin\Debug\net6.0\Library.DomainClasses.pdb
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.csproj.AssemblyReference.cache
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.AssemblyInfoInputs.cache
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.AssemblyInfo.cs
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.csproj.CoreCompileInputs.cache
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.dll
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\refint\Library.DomainClasses.dll
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\Library.DomainClasses.pdb
+C:\Users\mahdi\source\repos\Library\Library.DomainClasses\obj\Debug\net6.0\ref\Library.DomainClasses.dll
