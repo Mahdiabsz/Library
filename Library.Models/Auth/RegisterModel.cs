@@ -11,6 +11,10 @@ namespace Library.Models.Auth
     {
         [Required]
         public string Username { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Family { get; set; }
 
         [EmailAddress]
         [Required]

@@ -796,6 +796,43 @@
         "runtime": {
           "bin/placeholder/Library.DomainClasses.dll": {}
         }
+      },
+      "Library.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Library.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Models.dll": {}
+        }
+      },
+      "Library.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Library.Data": "1.0.0",
+          "Library.DomainClasses": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Library.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.Services.dll": {}
+        }
+      },
+      "Library.UOW/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Library.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Library.UOW.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.UOW.dll": {}
+        }
       }
     }
   },
@@ -2244,11 +2281,28 @@
       "type": "project",
       "path": "../Library.DomainClasses/Library.DomainClasses.csproj",
       "msbuildProject": "../Library.DomainClasses/Library.DomainClasses.csproj"
+    },
+    "Library.Models/1.0.0": {
+      "type": "project",
+      "path": "../Library.Models/Library.Models.csproj",
+      "msbuildProject": "../Library.Models/Library.Models.csproj"
+    },
+    "Library.Services/1.0.0": {
+      "type": "project",
+      "path": "../Library.Services/Library.Services.csproj",
+      "msbuildProject": "../Library.Services/Library.Services.csproj"
+    },
+    "Library.UOW/1.0.0": {
+      "type": "project",
+      "path": "../Library.UOW/Library.UOW.csproj",
+      "msbuildProject": "../Library.UOW/Library.UOW.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Library.Data >= 1.0.0",
+      "Library.Models >= 1.0.0",
+      "Library.UOW >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2288,6 +2342,12 @@
           "projectReferences": {
             "C:\\Users\\mahdi\\source\\repos\\Library\\Library.Data\\Library.Data.csproj": {
               "projectPath": "C:\\Users\\mahdi\\source\\repos\\Library\\Library.Data\\Library.Data.csproj"
+            },
+            "C:\\Users\\mahdi\\source\\repos\\Library\\Library.Models\\Library.Models.csproj": {
+              "projectPath": "C:\\Users\\mahdi\\source\\repos\\Library\\Library.Models\\Library.Models.csproj"
+            },
+            "C:\\Users\\mahdi\\source\\repos\\Library\\Library.UOW\\Library.UOW.csproj": {
+              "projectPath": "C:\\Users\\mahdi\\source\\repos\\Library\\Library.UOW\\Library.UOW.csproj"
             }
           }
         }

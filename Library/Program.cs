@@ -1,5 +1,6 @@
 using Library.Data.Context;
 using Library.DomainClasses.Auth;
+using Library.UOW.UOW;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 // Adding DbContext
 builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(configuration.GetConnectionString("Default")));
+//Adding unit of work
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // For Identity
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<LibraryContext>()
