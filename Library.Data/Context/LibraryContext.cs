@@ -2,6 +2,7 @@
 using Library.DomainClasses.Classes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Library.Data.Configs;
 
 namespace Library.Data.Context
 {
@@ -22,6 +23,13 @@ namespace Library.Data.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration(new BookConfig());
+            builder.ApplyConfiguration(new GenreConfig());
+            builder.ApplyConfiguration(new BorrowConfig());
+            builder.ApplyConfiguration(new AuthorConfig());
+            builder.ApplyConfiguration(new WarehouseConfig());
+
         }
     }
 }
