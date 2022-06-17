@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.DomainClasses.Auth;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,8 +11,10 @@ namespace Library.DomainClasses.Classes
 {
     public class Borrow : Base
     {
-        //TODO
-        //UserId
+        [Required]
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        public MyUser User { get; set; }
         [Required]
         public int BookId { get; set; }
         [ForeignKey("BookId")]

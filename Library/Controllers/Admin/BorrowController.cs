@@ -27,6 +27,7 @@ namespace Library.Controllers.Admin
                 return NotFound();
 
             borrow.IsDeivered = true;
+            borrow.DateOfDeliver = DateTime.Now;
             _uow.Borrow.Update(borrow);
 
             try

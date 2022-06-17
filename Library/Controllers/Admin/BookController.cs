@@ -21,8 +21,8 @@ namespace Library.Controllers.Admin
             _uow = uow;
         }
 
-        [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Book>> GetBooks(Pager pager)
+        [HttpPost("[action]")]
+        public ActionResult<IEnumerable<BookGetAllModel>> GetBooksAdmin(Pager pager)
         {
             var books = _uow.Book.GetAllInclude(pager.PageSize, pager.PageNumber);
             if (books.Any())
@@ -50,7 +50,7 @@ namespace Library.Controllers.Admin
         }
 
         [HttpGet("[action]/{id}")]
-        public ActionResult<BookGetModel> GetById(int id)
+        public ActionResult<BookGetModel> GetByIdAdmin(int id)
         {
             var book = _uow.Book.GetById(id);
             if (book == null)
