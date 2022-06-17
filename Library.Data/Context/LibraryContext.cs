@@ -6,7 +6,7 @@ using Library.Data.Configs;
 
 namespace Library.Data.Context
 {
-    public class LibraryContext : IdentityDbContext<User>
+    public class LibraryContext : IdentityDbContext<MyUser>
     {
         public LibraryContext(DbContextOptions<LibraryContext> options)
             : base(options)
@@ -17,7 +17,6 @@ namespace Library.Data.Context
         public DbSet<Book> Books { get; set; }
         public DbSet<Borrow> Borrows { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Warehouse> Warehouses { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -28,7 +27,6 @@ namespace Library.Data.Context
             builder.ApplyConfiguration(new GenreConfig());
             builder.ApplyConfiguration(new BorrowConfig());
             builder.ApplyConfiguration(new AuthorConfig());
-            builder.ApplyConfiguration(new WarehouseConfig());
 
         }
     }

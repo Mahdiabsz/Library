@@ -19,13 +19,11 @@ namespace Library.UOW.UOW
             Book = new BookRepository(_context);
             Borrow = new BorrowRepository(_context);
             Genre = new GenreRepository(_context);
-            Warehouse = new WarehouseRepository(_context);
         }
         public IAuthorRepository Author { get; private set; }
         public IBookRepository Book { get; private set; }
         public IBorrowRepository Borrow { get; private set; }
         public IGenreRepository Genre { get; private set; }
-        public IWarehouseRepository Warehouse { get; private set; }
 
         public void Dispose()
         {
@@ -36,3 +34,4 @@ namespace Library.UOW.UOW
             return _context.SaveChanges();
         }
     }
+}

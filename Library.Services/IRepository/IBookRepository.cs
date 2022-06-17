@@ -9,5 +9,6 @@ namespace Library.Services.IRepository
 {
     public interface IBookRepository : IGenericRepository<Book>
     {
+        IEnumerable<Book> GetAllInclude(int pageSize, int pageNumber);
     }
 }

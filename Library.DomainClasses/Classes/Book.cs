@@ -15,6 +15,8 @@ namespace Library.DomainClasses.Classes
         [Required]
         public string Description { get; set; }
         [Required]
+        public int Stock { get; set; }
+        [Required]
         public int AuthorId { get; set; }
         [ForeignKey("AuthorId")]
         public Author Author { get; set; }
@@ -22,5 +24,6 @@ namespace Library.DomainClasses.Classes
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
+
     }
 }

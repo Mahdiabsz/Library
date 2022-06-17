@@ -9,6 +9,8 @@
       "Library/1.0.0": {
         "dependencies": {
           "Library.Data": "1.0.0",
+          "Library.Models": "1.0.0",
+          "Library.UOW": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -562,6 +564,28 @@
         "runtime": {
           "Library.DomainClasses.dll": {}
         }
+      },
+      "Library.Models/1.0.0": {
+        "runtime": {
+          "Library.Models.dll": {}
+        }
+      },
+      "Library.Services/1.0.0": {
+        "dependencies": {
+          "Library.Data": "1.0.0",
+          "Library.DomainClasses": "1.0.0"
+        },
+        "runtime": {
+          "Library.Services.dll": {}
+        }
+      },
+      "Library.UOW/1.0.0": {
+        "dependencies": {
+          "Library.Services": "1.0.0"
+        },
+        "runtime": {
+          "Library.UOW.dll": {}
+        }
       }
     }
   },
@@ -955,6 +979,21 @@
       "sha512": ""
     },
     "Library.DomainClasses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library.UOW/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

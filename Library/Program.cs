@@ -14,7 +14,7 @@ builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(co
 //Adding unit of work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // For Identity
-builder.Services.AddIdentity<User, IdentityRole>()
+builder.Services.AddIdentity<MyUser, IdentityRole>()
     .AddEntityFrameworkStores<LibraryContext>()
     .AddDefaultTokenProviders();
 

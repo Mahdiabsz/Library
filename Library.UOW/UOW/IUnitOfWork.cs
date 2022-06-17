@@ -13,7 +13,6 @@ namespace Library.UOW.UOW
         IBookRepository Book { get; }
         IBorrowRepository Borrow { get; }
         IGenreRepository Genre { get; }
-        IWarehouseRepository Warehouse { get; }
         int Save();
     }
 }

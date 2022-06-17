@@ -10,3 +10,10 @@ C:\Users\mahdi\source\repos\Library\Library.UOW\obj\Debug\net6.0\Library.UOW.dll
 C:\Users\mahdi\source\repos\Library\Library.UOW\obj\Debug\net6.0\refint\Library.UOW.dll
 C:\Users\mahdi\source\repos\Library\Library.UOW\obj\Debug\net6.0\Library.UOW.pdb
 C:\Users\mahdi\source\repos\Library\Library.UOW\obj\Debug\net6.0\ref\Library.UOW.dll
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.Data.dll
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.DomainClasses.dll
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.Services.dll
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.Services.pdb
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.Data.pdb
+C:\Users\mahdi\source\repos\Library\Library.UOW\bin\Debug\net6.0\Library.DomainClasses.pdb
+C:\Users\mahdi\source\repos\Library\Library.UOW\obj\Debug\net6.0\Library.UOW.csproj.CopyComplete
