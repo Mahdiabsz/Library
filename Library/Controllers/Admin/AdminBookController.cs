@@ -11,18 +11,17 @@ namespace Library.Controllers.Admin
     [Authorize(Roles = UserRoles.Admin)]
     [Area("Admin")]
     [Route("[area]/api/[controller]")]
-    [Route("api/[controller]")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class AdminBookController : ControllerBase
     {
         private readonly IUnitOfWork _uow;
-        public BookController(IUnitOfWork uow)
+        public AdminBookController(IUnitOfWork uow)
         {
             _uow = uow;
         }
 
         [HttpPost("[action]")]
-        public ActionResult<IEnumerable<BookGetAllModel>> GetBooksAdmin(Pager pager)
+        public ActionResult<IEnumerable<BookGetAllModel>> GetBooks(Pager pager)
         {
             var books = _uow.Book.GetAllInclude(pager.PageSize, pager.PageNumber);
             if (books.Any())
@@ -50,7 +49,7 @@ namespace Library.Controllers.Admin
         }
 
         [HttpGet("[action]/{id}")]
-        public ActionResult<BookGetModel> GetByIdAdmin(int id)
+        public ActionResult<BookGetModel> GetById(int id)
         {
             var book = _uow.Book.GetById(id);
             if (book == null)

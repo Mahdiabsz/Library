@@ -11,7 +11,6 @@ namespace Library.Controllers.User
     [Authorize(Roles = UserRoles.User)]
     [Area("User")]
     [Route("[area]/api/[controller]")]
-    [Route("api/[controller]")]
     [ApiController]
     public class BorrowController : ControllerBase
     {

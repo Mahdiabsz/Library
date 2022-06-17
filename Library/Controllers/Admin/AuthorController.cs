@@ -11,7 +11,6 @@ namespace Library.Controllers.Admin
     [Authorize(Roles = UserRoles.Admin)]
     [Area("Admin")]
     [Route("[area]/api/[controller]")]
-    [Route("api/[controller]")]
     [ApiController]
     public class AuthorController : ControllerBase
     {
