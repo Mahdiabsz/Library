@@ -20,14 +20,16 @@ namespace Library.Controllers.Admin
         }
 
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Genre>> GetGenres()
+        public IActionResult GetGenres()
         {
-            var list = _uow.Author.GetAll();
-            return Ok(list);
+            var list = _uow.Genre.GetAll();
+            if (list.Any())
+                return Ok(list);
+            return NoContent();
         }
 
         [HttpGet("[action]/{id}")]
-        public ActionResult<Genre> GetById(int id)
+        public IActionResult GetById(int id)
         {
             var genre = _uow.Genre.GetById(id);
 
@@ -42,6 +44,9 @@ namespace Library.Controllers.Admin
         {
             try
             {
+                if (!ModelState.IsValid)
+                    return BadRequest();
+
                 var genre = new Genre()
                 {
                     Name = genreModel.Name,

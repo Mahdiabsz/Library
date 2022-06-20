@@ -44,7 +44,7 @@ namespace Library.Controllers.Admin
             }
             else
             {
-                return NotFound();
+                return NoContent();
             }
         }
 

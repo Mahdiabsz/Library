@@ -21,14 +21,17 @@ namespace Library.Controllers.Admin
         }
 
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Author>> GetAuthors()
+        public IActionResult GetAuthors()
         {
             var list = _uow.Author.GetAll();
-            return Ok(list);
+            if (list.Any())
+                return Ok(list);
+
+            return NoContent();
         }
 
         [HttpGet("[action]/{id}")]
-        public ActionResult<Author> GetById(int id)
+        public IActionResult GetById(int id)
         {
             var author = _uow.Author.GetById(id);
 
@@ -41,23 +44,19 @@ namespace Library.Controllers.Admin
         [HttpPost("[action]")]
         public IActionResult AddAuthor(AuthorModel authorModel)
         {
-            try
-            {
-                var author = new Author()
-                {
-                    Name = authorModel.Name,
-                    Family = authorModel.Family
-                };
-
-                _uow.Author.Add(author);
-                _uow.Save();
-
-                return Ok();
-            }
-            catch
-            {
+            if(!ModelState.IsValid)
                 return BadRequest();
-            }
+
+            var author = new Author()
+            {
+                Name = authorModel.Name,
+                Family = authorModel.Family
+            };
+
+            _uow.Author.Add(author);
+            _uow.Save();
+
+            return Ok();
         }
 
         [HttpPut("[action]/{id}")]

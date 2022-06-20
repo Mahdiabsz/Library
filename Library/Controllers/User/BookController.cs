@@ -44,7 +44,7 @@ namespace Library.Controllers.User
             }
             else
             {
-                return NotFound();
+                return NoContent();
             }
         }
 
@@ -72,7 +72,7 @@ namespace Library.Controllers.User
             }
             else
             {
-                return NotFound();
+                return NoContent();
             }
         }
 
@@ -100,7 +100,7 @@ namespace Library.Controllers.User
             }
             else
             {
-                return NotFound();
+                return NoContent();
             }
         }
 
